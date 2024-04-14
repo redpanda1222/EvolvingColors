@@ -10,6 +10,7 @@
     <script type="text/javascript" src="./gameengine.js"></script>
     <script type="text/javascript" src="./automata.js"></script>
     <script type="text/javascript" src="./plant.js"></script>
+    <script type="text/javascript" src="./animat.js"></script>
     <script type="text/javascript" src="./util.js"></script>
     <script type="text/javascript" src="./main.js"></script>
 
@@ -23,8 +24,18 @@
 
         #buttonContainer {
             margin-left: 50px;
+            margin-right: 20px;
+            /* Adjust this value to control the space between buttons and slider */
         }
 
+        #buttonContainer button {
+            display:flex;
+            margin: 10px;
+        }
+
+        #sliderContainer {
+            margin-right: 50px;
+        }
     </style>
 </head>
 
@@ -33,9 +44,15 @@
         <canvas id="gameWorld" width="800" height="800" style="background: white; border: 1px solid black" tabindex="0"
             autofocus></canvas>
         <div id="buttonContainer">
-            <button id="start">Start</button>
+            <button id="addPlant">Add Plant</button>
+            <button id="addAnimat">Add Animat</button>
             <button id="killPlants">Kill Plants</button>
-            <!-- Add more buttons if needed -->
+            <button id="killAnimats">Kill Animats</button>
+            <button id="killAll">Kill All</button>
+        </div>
+        <div id="sliderContainer">
+            <label for="speedSlider">Animats' Speed:</label>
+            <input type="range" id="speedSlider" name="speedSlider" min="0.01" max="1" step="0.01" value="0.05">
         </div>
     </div>
 </body>

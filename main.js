@@ -10,12 +10,25 @@ ASSET_MANAGER.downloadAll(() => {
 
 	gameEngine.addEntity(automata);
 
-	document.getElementById("start").addEventListener("click", () => {
-		automata.start();
+	document.getElementById("addPlant").addEventListener("click", () => {
+		automata.addPlant();
+	});
+
+	document.getElementById("addAnimat").addEventListener("click", () => {
+		automata.addAnimat();
 	});
 
 	document.getElementById("killPlants").addEventListener("click", () => {
 		automata.clearPlants();
+	});
+
+	document.getElementById("killAnimats").addEventListener("click", () => {
+		automata.clearAnimats();
+	});
+
+	document.getElementById("killAll").addEventListener("click", () => {
+		automata.clearPlants();
+		automata.clearAnimats();
 	});
 
 	gameEngine.init(ctx);
